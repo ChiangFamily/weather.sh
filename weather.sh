@@ -15,9 +15,9 @@ if [ $# -ge 2 ]; then
 fi
 
 if [ $# -eq 1 ]; then
-    city=$1
+    city=$1"?lang=fr"
 else
-    city=$fallback
+    city=$fallback"?lang=fr"
 fi
 
 $command$city
