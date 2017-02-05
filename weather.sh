@@ -1,6 +1,12 @@
 #!/bin/bash
-fallback="Lyon"
-command="curl -4 http://wttr.in/"
+
+LANG=fr_FR.utf8
+
+function wttr()
+{
+    # change Paris to your default location
+    curl -H "Accept-Language: ${LANG%_*}" wttr.in/"${1:-Paris}"
+}
 
 curl --version > /dev/null 2> /dev/null
 
@@ -15,9 +21,7 @@ if [ $# -ge 2 ]; then
 fi
 
 if [ $# -eq 1 ]; then
-    city=$1"?lang=fr"
-else
-    city=$fallback"?lang=fr"
+    city=$1
 fi
 
-$command$city
+wttr $city
