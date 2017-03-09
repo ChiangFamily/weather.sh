@@ -1,12 +1,14 @@
 weather.sh
 ===
 
-Small script that calls http://wttr.in to display a cli complient weather.
+Small script that calls http://wttr.in to display a cli compliant weather.
 
 Customize
 ---
 
-You may edit the script to fallback on your prefered city (currently Lyon, France).
+You may edit the script to fallback on your preferred city (currently Paris, France) and language.
+
+The following 12 languages are supported at the moment: bg, cs, de, es, fr, it, pt, pl, ro, ru, sk, uk
 
 Install
 ---
