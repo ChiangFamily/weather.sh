@@ -8,7 +8,8 @@ Customize
 
 You may edit the script to fallback on your preferred city (currently Paris, France) and language.
 
-The following 12 languages are supported at the moment: bg, cs, de, es, fr, it, pt, pl, ro, ru, sk, uk
+*For supported languages and information about the translators visit http://wttr.in/:translation*
+
 
 Install
 ---
