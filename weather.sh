@@ -1,7 +1,8 @@
 #!/bin/bash
 
-# The variable ${LANG%_*} ensures that the script output is displayed in the language set by the bash variable.
-# Is anyway possible replace the variable ${LANG%_*} with your default language.
+# The variable ${LANG%_*} should will display the script output in the default language set in the bash variable.
+# Anyway, in cases where this isn't your desired language, is possible replace the variable with your preferred language.
+# For change your preferred language, set as follows: "Accept-Language: fr" 
 # Visit http://wttr.in/:translation for more details about supported languages.
 
 function wttr()
