@@ -1,11 +1,12 @@
 #!/bin/bash
 
-# Change ${LANG%_*} variable to your default language;
-# visit http://wttr.in/:translation for more details on supported languages.
-# Also change Paris to your default location.
+# The variable ${LANG%_*} ensures that the script output is displayed in the language set by the bash variable.
+# Is anyway possible replace the variable ${LANG%_*} with your default language.
+# Visit http://wttr.in/:translation for more details about supported languages.
 
 function wttr()
 {
+    # change Paris to your default location
     curl -H "Accept-Language: ${LANG%_*}" wttr.in/"${1:-Paris}"
 }
 
