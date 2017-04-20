@@ -1,10 +1,11 @@
 #!/bin/bash
 
-LANG=fr_FR.utf8
+# Change ${LANG%_*} variable to your default language;
+# visit http://wttr.in/:translation for more details on supported languages.
+# Also change Paris to your default location.
 
 function wttr()
 {
-    # change Paris to your default location
     curl -H "Accept-Language: ${LANG%_*}" wttr.in/"${1:-Paris}"
 }
 
