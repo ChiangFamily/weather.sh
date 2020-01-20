@@ -1,6 +1,15 @@
 #!/bin/bash
-fallback="Lyon"
-command="curl -4 http://wttr.in/"
+
+# The variable ${LANG%_*} should will display the script output in the default language set in the bash variable.
+# Anyway, in cases where this isn't your desired language, is possible replace the variable with your preferred language.
+# For change your preferred language, eg in french, set as follows: "Accept-Language: fr" 
+# Visit http://wttr.in/:translation for more details about supported languages.
+
+function wttr()
+{
+    # change Paris to your default location
+    curl -H "Accept-Language: ${LANG%_*}" wttr.in/"${1:-Paris}"
+}
 
 curl --version > /dev/null 2> /dev/null
 
@@ -16,8 +25,6 @@ fi
 
 if [ $# -eq 1 ]; then
     city=$1
-else
-    city=$fallback
 fi
 
-$command$city
+wttr $city
